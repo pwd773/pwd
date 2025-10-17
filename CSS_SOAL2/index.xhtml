@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html 
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Reservation Hotel Room</title>
+
+    <!-- CSS Langsung di Dalam Halaman -->
+    <style type="text/css">
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #fcd6e2, #ffe6ec); /* soft pink gradient */
+        color: #000000; /* teks jadi hitam */
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        max-width: 700px;
+        margin: 40px auto;
+        background: #ffffffcc;
+        padding: 30px 40px;
+        border-radius: 15px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+      }
+
+      h2 {
+        text-align: center;
+        color: #000000; /* teks hitam */
+        margin-bottom: 25px;
+        letter-spacing: 1px;
+      }
+
+      fieldset {
+        border: 2px solid #f3a5b9; /* garis pink lembut */
+        border-radius: 10px;
+        margin-bottom: 25px;
+        padding: 20px;
+        background-color: #fff9fa; /* background putih muda pink */
+      }
+
+      legend {
+        font-weight: bold;
+        color: #b34766; /* judul field pink tua */
+        font-size: 1.1em;
+        padding: 0 10px;
+      }
+
+      label {
+        display: block;
+        margin-top: 10px;
+        color: #000000;
+        font-size: 0.95em;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="date"],
+      select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #e6b5c5;
+        border-radius: 8px;
+        margin-top: 6px;
+        font-size: 0.95em;
+      }
+
+      .radio-group {
+        display: flex;
+        gap: 20px;
+        margin-top: 8px;
+      }
+
+      .radio-group label {
+        font-size: 0.9em;
+        color: #000000;
+      }
+
+      .button-container {
+        text-align: center;
+      }
+
+      input[type="submit"] {
+        background-color: #e889a3; /* pink tombol */
+        color: white;
+        padding: 12px 25px;
+        font-size: 1em;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #c86b87; /* pink tua pas hover */
+        transform: scale(1.05);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h2>Reservation Hotel Room</h2>
+
+      <form>
+        <fieldset>
+          <legend>Personal Data</legend>
+
+          <label for="name">1. Name</label>
+          <input type="text" name="name" id="name" />
+
+          <label for="gender">2. Gender</label>
+          <select name="gender" id="gender">
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option>
+          </select>
+
+          <label for="email">3. Email Address</label>
+          <input type="email" name="email" id="email" />
+
+          <label for="telp">4. Telp Number</label>
+          <input type="text" name="telp" id="telp" />
+        </fieldset>
+
+        <fieldset>
+          <legend>Reservation Room Form</legend>
+
+          <label for="reservation_name">1. Reservation Name</label>
+          <input type="text" name="reservation_name" id="reservation_name" />
+
+          <label for="booking_date">2. Booking Date</label>
+          <input type="date" name="booking_date" id="booking_date" />
+
+          <label for="room_type">3. Room Type</label>
+          <select name="room_type" id="room_type">
+            <option>Deluxe</option>
+            <option>Superior</option>
+            <option>Suite</option>
+          </select>
+
+          <label for="bed_type">4. Bed Type</label>
+          <select name="bed_type" id="bed_type">
+            <option>Single</option>
+            <option>Twin</option>
+          </select>
+
+          <label>5. Breakfast</label>
+          <div class="radio-group">
+            <label>
+              <input type="radio" name="breakfast" value="with" /> With Breakfast
+            </label>
+            <label>
+              <input type="radio" name="breakfast" value="without" /> Without Breakfast
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Payment</legend>
+
+          <label for="checkin">1. Check-in Date</label>
+          <input type="date" name="checkin" id="checkin" />
+
+          <label for="checkout">2. Check-out Date</label>
+          <input type="date" name="checkout" id="checkout" />
+
+          <label for="payment_method">3. Payment Method</label>
+          <select name="payment_method" id="payment_method">
+            <option>Cash</option>
+            <option>Credit Card</option>
+            <option>Debit Card</option>
+            <option>Transfer</option>
+          </select>
+        </fieldset>
+
+        <div class="button-container">
+          <input type="submit" value="Submit Reservation" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
